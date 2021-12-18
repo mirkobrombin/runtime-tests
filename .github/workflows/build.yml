@@ -35,3 +35,9 @@ jobs:
         with:
           name: runtime-build.tar.gz
           path: /home/runner/work/runtimezilla/runtime-build.tar.gz
+          
+      - name: Upload log.txt
+        uses: actions/upload-artifact@v2
+        with:
+          name: log.txt
+          path: /home/runner/work/runtimezilla/log.txt
