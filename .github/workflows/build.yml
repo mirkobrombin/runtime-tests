@@ -13,7 +13,7 @@ jobs:
         working-directory: /home/runner/work/
         run: git clone https://github.com/mirkobrombin/runtimezilla.git
       
-      - name: Install dependenciws
+      - name: Install dependencies
         working-directory: /home/runner/work/runtimezilla
         run: |
           sudo dpkg --add-architecture i386
@@ -30,8 +30,8 @@ jobs:
           python3 runtimezilla --recipe ../runtime-tests/runtime-tests/recipe.yml --output runtime-build
           ls 
           
-      - name: Upload log.txt
+      - name: Upload runtime-build.tar.gz
         uses: actions/upload-artifact@v2
         with:
-          name: log.txt
-          path: /home/runner/work/runtimezilla/log.txt
+          name: runtime-build.tar.gz
+          path: /home/runner/work/runtimezilla/runtime-build.tar.gz
