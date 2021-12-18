@@ -13,9 +13,9 @@ system:
   min_version: 20.04
   max_version: 20.04
   
-  ingredients:
-    - files:
-      - libSDL2_mixer-2.0.so.0: ''
-      package: libsdl2-mixer-2.0-0 libsdl2-mixer-2.0-0:i386
-      type: lib
-    
+ingredients:
+  - files:
+    - libSDL2_mixer-2.0.so.0: ''
+    package: libsdl2-mixer-2.0-0 libsdl2-mixer-2.0-0:i386
+    type: lib
+
