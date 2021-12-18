@@ -1,0 +1,21 @@
+properties:
+  name: test
+  version: 0.1
+  description: This is a test
+  author: mirkobrombin
+  license: MIT
+  url: https://mirko.pm
+
+packager: Aptitude
+
+system:
+  name: Ubuntu
+  min_version: 20.04
+  max_version: 20.04
+  
+  ingredients:
+    - files:
+      - libSDL2_mixer-2.0.so.0: ''
+      package: libsdl2-mixer-2.0-0 libsdl2-mixer-2.0-0:i386
+      type: lib
+    
