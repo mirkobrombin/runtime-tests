@@ -26,10 +26,10 @@ jobs:
       
       - name: Launch build.py
         working-directory: /home/runner/work/runtimezilla
-        run: python3 runtimezilla --recipe ../runtime-tests/runtime-tests/recipe.yml --output runtime-build > output.txt & sleep 120 & kill %-
+        run: python3 runtimezilla --recipe ../runtime-tests/runtime-tests/recipe.yml --output runtime-build > /dev/null & sleep 120 & kill %-
           
-      - name: Upload output.txt
+      - name: Upload log.txt
         uses: actions/upload-artifact@v2
         with:
-          name: output.txt
-          path: /home/runner/work/runtimezilla/output.txt
+          name: log.txt
+          path: /home/runner/work/runtimezilla/log.txt
