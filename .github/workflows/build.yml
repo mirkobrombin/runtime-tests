@@ -28,7 +28,7 @@ jobs:
         working-directory: /home/runner/work/runtimezilla
         run: |
           python3 runtimezilla --recipe ../runtime-tests/runtime-tests/recipe.yml --output runtime-build
-          ls 
+          ls runtime-build/lib32
           
       - name: Upload runtime-build.tar.gz
         uses: actions/upload-artifact@v2
